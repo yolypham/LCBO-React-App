@@ -10,16 +10,18 @@ render() {
         let beverageTag = beverage.tags;
         let beverageImage = beverage.image_thumb_url;       
         
+        //include beaus brand and beer
         if(beverageTag.includes("beaus") === false || beverageTag.includes("beer") === false){
             return null;    
         }
 
+        //assume incomplete product info, skip.
         if (beverageImage === null) {
             return null;
         }
 
-        //'Lug Thread' is not a seasonal beer therefore exclude         
-        if (beverage.name === "Lug Thread") {
+        // must be seasonal beverage        
+        if (beverage.is_seasonal === false) {
             return null;
         } else {            
             beverage.displayPrice = beverage.regular_price_in_cents > 0 ? (beverage.regular_price_in_cents / 100) : 0;

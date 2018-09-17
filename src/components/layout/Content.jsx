@@ -7,7 +7,7 @@ class Content extends Component {
         <section className="jumbotron text-center intro-custom">
         <div className="container">
             <div>&nbsp;</div>
-            <h1 className="seasonal-title-custom jumbotron-heading">Beau's Sesonal</h1>
+            <h1 className="seasonal-title-custom jumbotron-heading">Beau's Seasonal</h1>
             <p className="lead text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod commodi, 
                 rem voluptatem, ipsam modi velit soluta illum vero sit minima eos error 

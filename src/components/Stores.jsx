@@ -14,8 +14,6 @@ class Stores extends Component {
     componentDidMount() {
         const {productId, latitude, longitude} = this.props;
 
-        console.log (`https://lcboapi.com/stores?lat=${latitude}&lon=${longitude}&product_id=${productId}&access_key=${process.env.REACT_APP_API_KEY}`);
-
         axios
         .get(`https://lcboapi.com/stores?lat=${latitude}&lon=${longitude}&product_id=${productId}&access_key=${process.env.REACT_APP_API_KEY}`)
         .then(response => {
@@ -29,11 +27,17 @@ class Stores extends Component {
     }
 
     render() {
+        const {productId, latitude, longitude} = this.props;
         
         const storeList = this.state.stores.map((store, index) => {
             const distanceKm = store.distance_in_meters / 1000;
+            const addressLine1 = store.address_line_1.replace(/ /g, "+");
+            const postalCode = store.postal_code.replace(/ /g, "+");
 
-            const directionURL = `https://www.google.ca/maps/dir/43.8890451,-79.2848157/595+Bay+St,+Toronto,+ON+M5G+2R3`;
+            const directionURL = `https://www.google.ca/maps/dir/${latitude},${longitude}/${addressLine1},+${store.city},+${postalCode}`;
+            
+            //console.log(directionURL);
+
             return (
                 <div className="row" key={index} >
                     <div className="col-sm">

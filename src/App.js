@@ -65,13 +65,6 @@ class App extends Component {
                 this.setState({
                     beverages: beverageArray
                 });
-                
-                // response.data.result.map((list) => {
-                //     if(list.tags.includes("beaus") === true){
-                //         beverageArray.push(list);
-                //         this.setState({product_id: beverageArray[0].id});
-                //     }
-                // });
             })
             .catch( (error) => {
                 console.log(`API Get products error. ${error}`);
