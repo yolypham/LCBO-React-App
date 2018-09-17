@@ -30,7 +30,7 @@ class Stores extends Component {
         const {productId, latitude, longitude} = this.props;
         
         const storeList = this.state.stores.map((store, index) => {
-            const distanceKm = store.distance_in_meters / 1000;
+            const distanceKm = (store.distance_in_meters / 1000).toFixed(1);
             const addressLine1 = store.address_line_1.replace(/ /g, "+");
             const postalCode = store.postal_code.replace(/ /g, "+");
 
