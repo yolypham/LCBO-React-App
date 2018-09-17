@@ -1,0 +1,60 @@
+
+.title-custom {
+    font-family: abril, fatface;
+    color:  #ffffff;
+    font-size: 35pt;
+    vertical-align: middle; 
+  }
+
+.logo-custom {
+    background-image: url("./img/noun_barley_137626.svg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f5dfbd;     
+}
+
+h1.seasonal-title-custom {
+    font-family: abril, fattace;
+    font-size: 45pt;
+    color: #000000;
+}
+
+.intro-custom {
+    background-color: rgb(164, 186, 186);
+    padding-bottom: 5px;
+    padding-top: 80px;
+}
+
+.product-section-custom {
+    margin-top: -40px;
+    background-color: #c4a077;
+}
+
+.container-items-custom {
+    background-color: #f5dfbd;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.modal-body-custom {
+    font-size: 10pt;
+}
+
+.detail-label-custom {
+    width: 40px;
+    font-weight: bold;
+}
+
+.detail-info-custom {
+    width: 100px;
+    margin-left: 40px;
+}
+
+img.direction-icon {
+    background-image: url("./img/GoogleMaps_logo.svg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
