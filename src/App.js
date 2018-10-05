@@ -22,16 +22,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.getLocation();
-
-        const fx = () => { 
-            this.loadBeverages();
-        }
-
-        setTimeout(fx, 5000);
-    }
-
-    getLocation = () => {
         const geolocation = navigator.geolocation;
     
         new Promise((resolve, reject) => {
@@ -44,16 +34,17 @@ class App extends Component {
 
             // console.log(position.coords.latitude);
             // console.log(position.coords.longitude);
-
             this.setState ({
                 latitude: position.coords.latitude,
                 longitude: position.coords.longitude
-            })
+            },
+            this.loadBeverages())
+
           }, () => {
             reject (new Error('Permission denied'));
           });
         });
-    } 
+    }
 
     loadBeverages = () => { 
         axios
